@@ -1,0 +1,15 @@
+<div *ngIf="raceName !== ''">
+<h3 class="m-2 pl-2">Last Race</h3> 
+<h4 class="mx-2 pl-4">{{ raceName }} ({{raceDate}})</h4>
+<h5>@angular/material:table (SCHEMATICS)</h5>
+<!-- <div *ngFor="let res of results; let i=index">
+    <div class="card card-body p-1 m-2"  [ngClass]="{'bg-success text-white': i <= 2, 'bg-light text-dark' : i > 2 }">
+        <h5><a  class="text-black" [ngStyle]="{'text-decoration': 'none'}"  href="{{ res.Driver.url }}" target="_blank">{{ res.Driver.givenName }} {{ res.Driver.familyName }} </a>
+        <span class="badge bg-primary">{{res.position}}</span> 
+         <i class="mx-3" [ngClass]="getIconIncDec(res)"></i>  </h5>
+    </div> 
+</div> -->
+<app-tabla [data]="results"></app-tabla>
+</div>
+
+

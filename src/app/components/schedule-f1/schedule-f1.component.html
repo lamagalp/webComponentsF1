@@ -1,0 +1,23 @@
+<div *ngIf="races.length > 0">
+<h3 [@animaciones]="estado">F1 Schedule 2022</h3>
+<div class="accordion" id="schedule" *ngFor="let race of races; let i=index">
+    <div class="accordion-item">
+      <h4 class="accordion-header h5 m-1 p-1" id="{{'heading' + race.date}}">
+        <span>{{ race.raceName }} ({{ race.date }})</span>  
+        <button *ngIf="mostrarResultados === true && fechaValida(race.date) && show(race.season, race.round) === false"  class="btn text-info mx-1 my-1" (click)="obtenerResultados(race.season, race.round)">Show results <i class="fa-solid fa-chevron-down"></i></button>                
+        <button *ngIf="mostrarResultados === false && show(race.season, race.round) === true" class="btn text-info mx-1 my-1" (click)="ocultarResultados(race.season, race.round)"><i class="fa-solid fa-chevron-up"></i> Hide results </button>                
+      </h4>
+      <div class="accordion-collapse collapse" [ngClass]="{'show': show(race.season, race.round)}">
+        <div class="row accordion-body">
+            <div *ngIf="show(race.season, race.round)"  class="col-6">        
+                <app-quali-result-f1 [anio]="anioSeleccionado" [fecha]="fechaSeleccionada"></app-quali-result-f1>
+            </div>
+            <div *ngIf="show(race.season, race.round)" class="col-6">        
+                <app-race-result-f1 [anio]="anioSeleccionado" [fecha]="fechaSeleccionada"></app-race-result-f1>
+            </div>    
+        </div>
+      </div>
+    </div>    
+</div>
+
+</div>
