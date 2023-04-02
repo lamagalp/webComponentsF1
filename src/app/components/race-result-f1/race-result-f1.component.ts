@@ -17,7 +17,7 @@ from './race-result-f1.interface';
     raceName = '';
     raceDate = '';
 
-    @Input() anio: string = '2022';
+    @Input() anio: string = '2023';
     @Input() fecha:string = '1';
    constructor(private _raceResultsF1Service: RaceResultF1Service) {}
 

@@ -12,6 +12,8 @@ import { RaceResultF1Component } from './components/race-result-f1/race-result-f
 import { ScheduleF1Component } from './components/schedule-f1/schedule-f1.component';
 import { QualiResultF1Component } from './components/quali-result-f1/quali-result-f1.component';
 import { LastResultF1Component } from './components/last-result-f1/last-result-f1.component';
+import { MouseOverDirective } from './directives/mouse-over.directive';
+import { LifeCycleDirective } from './directives/life-cycle.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LastResultF1Component } from './components/last-result-f1/last-result-f
     RaceResultF1Component,
     ScheduleF1Component,
     QualiResultF1Component,
-    ChampionshipF1Component
+    ChampionshipF1Component,
+    LifeCycleDirective,
+    MouseOverDirective
   ],
   imports: [
     BrowserModule,

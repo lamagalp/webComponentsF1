@@ -14,7 +14,7 @@ from './schedule-f1.interface';
 import {trigger, state, transition, animate , style } from '@angular/animations';
 
 @Component({ selector: 'app-schedule-f1', templateUrl: './schedule-f1.component.html' ,
-animations: [ 
+animations: [
   trigger('animaciones',[
    /*  state('active', style({
         transform: 'translate(-10px, 0px)'
@@ -23,10 +23,10 @@ animations: [
       transform: 'translate(20px, 0px)'
     })), */
     state('active', style({
-      transform: 'scale(2,2)'
+      transform: 'scale(1.5,1.5)'
     })),
   state('inactive', style({
-    transform: 'scale(1,1)'
+    transform: 'scale(0.7,0.7)'
   })),
     transition('inactive => active', animate('1000ms ease-in')),
     transition('active => inactive', animate('1000ms ease-out'))
@@ -42,14 +42,14 @@ animations: [
   mostrarResultados = true;
 
   constructor(private _scheduleF1Service: ScheduleF1Service) {
-    this.fecha = new Date();    
+    this.fecha = new Date();
   }
 
     ngOnInit():void {
-      this._scheduleF1Service.getSchedule(2022).subscribe(
+      this._scheduleF1Service.getSchedule(2023).subscribe(
         (rta : Api) => {
           //console.log(rta);
-          this.races = rta.MRData.RaceTable.Races;          
+          this.races = rta.MRData.RaceTable.Races;
         }
       );
       setInterval(() =>{
@@ -59,8 +59,8 @@ animations: [
          this.estado = 'active';
       },1000);
 
-    
-    }  
+
+    }
 
   obtenerResultados(anio: string, fecha: string){
     this.anioSeleccionado = anio;
@@ -68,10 +68,10 @@ animations: [
     this.mostrarResultados = false;
   }
 
-  ocultarResultados(anio: string, fecha: string){    
+  ocultarResultados(anio: string, fecha: string){
     this.anioSeleccionado = '';
     this.fechaSeleccionada = '';
-    this.mostrarResultados = true; 
+    this.mostrarResultados = true;
   }
 
   show(anio: string, fecha: string){

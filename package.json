@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:component": "ng build --configuration production --output-hashing none && node concat-script.js",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "localDeploy:prod": "npm run build && cd dist/web-component && serve"
   },
   "private": true,
   "dependencies": {

@@ -6,38 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://kit.fontawesome.com/f644fad36a.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <script src="./f1-races-results.js" defer></script> 
-  <link href="bootstrap.min.css" rel="stylesheet">
+  <script src="../widget/f1-races-results.js" defer></script>
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="mat-typography">
-<nav class="navbar navbar-dark bg-dark">
+<body class="mat-typography bg-black">
+<nav class="navbar navbar-dark bg-black">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#"><img class="img-thumbnail" src="./images/f1-logo.png" alt="logo F1"></a> 
-		<h1 class="h2 text-white-50">Angular WebComponents <span class="h5">by LMLP</span></h1>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarText">
-		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-			<li class="nav-item">
-			<a class="nav-link active" aria-current="page" href="#">Home</a>
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="#">Web Components List</a>
-			</li>			 
-		</ul>	
-		</div>
+    <div class="col-3">
+      <a class="navbar-brand" href="https://www.freepik.com/free-vector/banner-speed-motion-background-with-fast-speedometer-car-racing-velocity-background_31288323.htm#page=2&query=race%20night&position=33&from_view=search&track=ais"><img src="./assets/speedrace.jpg" alt="Image by maniacvector"></a>
+    </div>
+    <div class="col-4">
+      <h1 class="h2 text-white-50">Angular WebComponents <span class="h5">by LMLP</span></h1>
+    </div>
+   <!--  <div class="col-5">
+        <div class="navbar-expand-md" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#">Web Components List</a>
+          </li>
+        </ul>
+        </div>
+    </div> -->
 	</div>
 </nav>
-
-<div class="container-fluid text-center my-4">    
+<div class="container-fluid text-center my-4 bg-black">
 <app-root></app-root>
 </div>
-<footer class="container-fluid text-center">
+<footer class="container-fluid text-center bg-black">
 	<p>API:  <a href="http://ergast.com/mrd/">http://ergast.com/mrd/</a></p>
 	<p>Tutorial:  <a href="https://www.youtube.com/c/mugan86">Anartz Mugika Ledo - Desarrollo & Formación</a></p>
 </footer>

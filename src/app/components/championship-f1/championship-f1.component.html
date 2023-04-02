@@ -1,6 +1,6 @@
 <div *ngIf="driversResults.length !== 0">
-<h3 class="mx-2 pl-4">Championship </h3>
-<h4>Season: {{season}} - Round: {{round}}</h4>
+<h2 class="mx-2 pt-2 pl-4 text-white">Championship <mat-icon class="text-warning">emoji_events</mat-icon> </h2>
+<h4 class="text-white">Season: {{season}} - Round: {{round}}</h4>
 <div class="table-responsive">
     <table class="table table-bordered table-dark">
         <thead>
@@ -17,11 +17,11 @@
             <td>{{res.Driver.givenName }} {{res.Driver.familyName }} </td>
             <td>
                 <ng-container *ngFor="let cons of res.Constructors">
-                    {{ cons.name + '  ' }} 
-                </ng-container>            
+                    {{ cons.name + '  ' }}
+                </ng-container>
             </td>
             <td>{{ res.points}}</td>
-        </tr>    
+        </tr>
         </tbody>
     </table>
 </div>

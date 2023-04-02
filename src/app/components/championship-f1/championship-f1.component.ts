@@ -13,13 +13,13 @@ from './championship-f1.interface';
 
 @Component({ selector: 'app-championship-f1', templateUrl: './championship-f1.component.html' }) export class ChampionshipF1Component implements OnInit {
 
-  @Input() anio: string = '2022'; 
-  @Input() fecha: string = '1'; 
+  @Input() anio: string = '2023';
+  @Input() fecha: string = '1';
 
   round: string = '';
   season: string ='';
   driversResults: Array<DriverStanding> = [];
-    
+
    constructor(private _championshipF1Service: ChampionshipF1Service) {}
 
     ngOnInit():void {

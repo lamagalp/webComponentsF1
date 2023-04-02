@@ -1,27 +1,29 @@
-<mat-card class="example-card">
+<mat-card appMouseOver="lightgray" class="bg-dark">
     <ng-container *ngIf="raceName !== ''; else loading">
-        <mat-card-header>     
-        <mat-card-title>Race Results</mat-card-title>
-        <mat-card-subtitle>{{ raceName }}</mat-card-subtitle>        
-        </mat-card-header> 
+        <mat-card-header>
+        <mat-card-title class="text-white d-flex justify-content-start">Race Results</mat-card-title>
+        <mat-card-subtitle class="text-white mt-2">{{ raceName }}</mat-card-subtitle>
+        </mat-card-header>
 
-        <mat-card-content >      
-            <p>(Material + Bootstrap classes)</p>    
+        <mat-card-content >
+            <p class="text-info">(Material + Bootstrap classes)</p>
             <div *ngFor="let res of results; let i=index">
                 <mat-card class="text-black m-1" [ngClass]="{'bg-info': i <= 2, 'bg-light' : i > 2 }">
-                    <mat-card-content>                        
+                    <mat-card-content>
                       <!--   <div mat-card-avatar>
-                            <img [ngStyle]="{width: '100%'}" src="../../assets/volante.png">                        
+                            <img [ngStyle]="{width: '100%'}" src="../../assets/volante.png">
                         </div> -->
                         <span matBadge="{{res.position}}" matBadgeOverlap="false" matBadgePosition="after"><a class="text-black m-2" [ngStyle]="{'text-decoration': 'none'}" href="{{ res.Driver.url }}" target="_blank"><strong>{{ res.Driver.givenName }} {{ res.Driver.familyName }}  </strong></a></span>
-                    </mat-card-content>                    
+                    </mat-card-content>
                 </mat-card>
-            </div>   
+            </div>
         </mat-card-content>
     </ng-container>
     <mat-card-content>
-    <ng-template  #loading>        
+    <ng-template #loading>
+      <div class="d-flex align-items-center justify-content-center">
         <mat-spinner color="bg-primary"></mat-spinner>
+      </div>
     </ng-template>
     </mat-card-content>
     <!-- <mat-card-actions>

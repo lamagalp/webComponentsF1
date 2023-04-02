@@ -7,7 +7,7 @@ import { TablaComponent } from './components/tabla/tabla.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -18,13 +18,15 @@ import { MatSortModule } from '@angular/material/sort';
     CommonModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatIconModule
   ],
   exports: [
     MatCardModule,
     MatProgressSpinnerModule,
     MatBadgeModule,
-    TablaComponent
+    TablaComponent,
+    MatIconModule
   ]
 })
 export class MaterialModule { }

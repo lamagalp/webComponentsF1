@@ -11,8 +11,8 @@ import {
 }
 from './quali-result-f1.interface';
 
-@Component({ selector: 'app-quali-result-f1', 
-templateUrl: './quali-result-f1.component.html', 
+@Component({ selector: 'app-quali-result-f1',
+templateUrl: './quali-result-f1.component.html',
 styles: ['.example-card {  max-width: 400px;}']
 }) export class QualiResultF1Component implements OnInit {
 
@@ -20,7 +20,7 @@ styles: ['.example-card {  max-width: 400px;}']
     raceName = '';
     raceDate = '';
 
-    @Input() anio: string = '2022';
+    @Input() anio: string = '2023';
     @Input() fecha:string = '1';
    constructor(private _qualiResultsF1Service: QualiResultF1Service) {}
 
@@ -38,5 +38,5 @@ styles: ['.example-card {  max-width: 400px;}']
       );
     }
 
-    
+
 }
